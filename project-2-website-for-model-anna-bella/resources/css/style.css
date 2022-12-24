@@ -27,3 +27,12 @@ a {
     font-weight: bold;
     padding: 5px;
 }
+
+.img-campanha {
+    border: 10px solid #c3c3ae;
+}
+
+h1 {
+    color: #828271;
+    font-size: 1.2em;
+}
