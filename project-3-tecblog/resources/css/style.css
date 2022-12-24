@@ -44,6 +44,18 @@ body {
     background: white;
 }
 
+.conteudo-lateral {
+    background: white;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.postagem-lateral {
+    font-size: 0.8em;
+    padding: 5px;
+    border-bottom: 1px dotted #CCC;
+}
+
 #rodape {
     clear: both;
     text-align: center;
@@ -85,6 +97,12 @@ h1 {
 
 h2 {
     color: #f7b600;
+}
+
+h3 {
+    color: #565656;
+    background: #CCC;
+    padding: 5px;
 }
 
 .branco {
