@@ -113,7 +113,7 @@ body.fotos #navegacao a#fotos {
     margin: 0 0 20px 15px;
 }
 
-/* Formatação do conteúdo lateral */
+/* Formatação geral class caixa */
 
 .caixa {
     margin: 10px 0;
@@ -125,11 +125,51 @@ h2 {
     font-size: 1.1em;
     background: #294c71;
     color: #fff;
+    padding: 5px;
 }
 
 .caixa-conteudo {
     background: #fff;
     padding: 5px;
+}
+
+/* Formatação menus laterais */
+
+#lateral ul a {
+    font-size: 0.9em;
+    padding: 3px;
+    display: block;
+    line-height: 30px;
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+#lateral ul a:hover {
+    background: #f9f9f9 url(../images/marcador.png) no-repeat left center;
+    color: #a1a1a1;
+    padding-left: 20px;
+}
+
+/* Formatando formulários */
+
+label {
+    display: block;
+    cursor: pointer;
+}
+
+input {
+    padding: 5px;
+    width: 125px;
+    font-size: 0.9em;
+    background-color: #fff;
+}
+
+input.submit {
+    width: 80px;
+    color: #fff;
+    background-color: #b10333;
+    border: 2px solid #870529;
 }
 
 /* Rodapé */
