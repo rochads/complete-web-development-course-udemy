@@ -19,7 +19,6 @@ body {
     height: 150px;
     background: url(../images/detalhe-topo.png) no-repeat right top;
     padding-top: 25px;
-    border: 1px solid red;
 }
 
 .logo {
@@ -92,7 +91,6 @@ body.fotos #navegacao a#fotos {
 
 #primario {
     width: 270px;
-    background: blue;
     float: left;
     margin: 0 0 20px 195px;
 }
@@ -108,7 +106,6 @@ body.fotos #navegacao a#fotos {
 
 #secundario {
     width: 270px;
-    background: green;
     float: left;
     margin: 0 0 20px 15px;
 }
@@ -170,6 +167,31 @@ input.submit {
     color: #fff;
     background-color: #b10333;
     border: 2px solid #870529;
+}
+
+/* Formatando imagens */
+
+img.imagem-principal {
+    width: 98%;
+    border: 3px solid #dfdfdf;
+}
+
+/* Formatando cabeçalhos */
+
+h3 {
+    text-transform: uppercase;
+    display: inline;
+    font-size: 0.8em;
+    padding: 3px;
+}
+
+.destaque h3 {
+    background: #b10333;
+}
+
+.entrevista h3 {
+    background: #de003e;
+    color: #fff;
 }
 
 /* Rodapé */
