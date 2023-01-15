@@ -112,6 +112,36 @@ nav.navbar-transparent {
     padding-left: 80px;
 }
 
+/* Footer
+-------------------------------------*/
+footer {
+    background: #000;
+    padding: 50px 0px 20px 0px;
+    position: relative;
+}
+
+footer h4 {
+    color: #919496;
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+
+footer .navbar-nav a {
+    font-size: 0.8em;
+    color: white;
+}
+
+footer .navbar-nav a:hover {
+    color: #9bf0e1;
+    text-decoration: none;
+}
+
+footer ul#social-medias li {
+    float: right;
+    margin: 0 5px;
+}
+
+
 /* Typography
 -------------------------------------*/
 h1 {
@@ -139,6 +169,7 @@ h3 {
 @media (max-width: 575.98px) {
     .btn-custom {
         margin: 10px 15px;
+        font-size: 1em;
     }
 }
 
