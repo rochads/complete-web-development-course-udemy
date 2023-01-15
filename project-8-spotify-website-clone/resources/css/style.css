@@ -13,6 +13,7 @@ body {
 ---------------------------------------*/
 html, body, #home {
     height: 100%;
+    overflow-x: hidden;
 }
 
 nav.navbar-transparent {
@@ -73,6 +74,44 @@ nav.navbar-transparent {
     color: black;
 }
 
+/* Content Structure
+-------------------------------------*/
+.box {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#services {
+    background: white;
+}
+
+#services h2, #services h3 {
+    color: #7c25f8;
+}
+
+#resources {
+    color: white;
+}
+
+#resources h2 {
+    color: white;
+}
+
+#resources h3 {
+    color: #9bf0e1;
+}
+
+.albums {
+    padding: 10px 0;
+}
+
+.rotate {
+    -ms-transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+    padding-left: 80px;
+}
+
 /* Typography
 -------------------------------------*/
 h1 {
@@ -81,6 +120,19 @@ h1 {
     margin-bottom: 50px;
     color: white;
 }
+
+h2 {
+    font-size: 3em;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+}
+
+h3 {
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+}
+
 
 /* Extra small devices (portrait phones, less than 576px) */
 /* No media query since this is the default in Bootstrap */
