@@ -3,6 +3,20 @@ let width = 0
 let hearts = 3
 let time = 15
 
+let timeCreateGnat = 1500
+
+let level = window.location.search
+level = level.replace('?', '')
+
+switch (level) {
+    case 'normal':
+        timeCreateGnat = 1000
+        break
+    case 'hard':
+        timeCreateGnat = 750
+        break
+}
+
 function adjustGameWindowSize() {
     height = window.innerHeight
     width = window.innerWidth
