@@ -1,5 +1,6 @@
 let height = 0
 let width = 0
+let hearts = 3
 
 function adjustGameWindowSize() {
     height = window.innerHeight
@@ -13,7 +14,16 @@ adjustGameWindowSize()
 function defineRandomPosition() {
     
     if (document.getElementById('gnat')) {
+
         document.getElementById('gnat').remove()
+
+        if (hearts === 0) {
+            alert('game over')
+        } else {
+            document.getElementById(`heart${hearts}`).src = "./resources/images/heart_empty.png"
+            hearts--
+        }
+
     }
 
     let positionX = Math.floor(Math.random() * width) - 90
@@ -31,6 +41,9 @@ function defineRandomPosition() {
     gnat.style.top = `${positionY}px`
     gnat.style.position = 'absolute'
     gnat.id = 'gnat'
+    gnat.onclick = function() {
+        this.remove()
+    }
 
     document.body.appendChild(gnat)
 
