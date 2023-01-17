@@ -26,12 +26,14 @@ console.log (`gnat's position on the x-axis: ${positionX}, gnat's position on th
 
 let gnat = document.createElement('img')
 gnat.src = "./resources/images/gnat.png"
-gnat.className = defineRandomSize()
+gnat.className = defineRandomSize() + ' ' + defineRandomSide()
 gnat.style.left = `${positionX}px`
 gnat.style.top = `${positionY}px`
 gnat.style.position = 'absolute'
 
 document.body.appendChild(gnat)
+
+
 
 
 
@@ -51,3 +53,17 @@ function defineRandomSize() {
 }
 
 
+
+
+
+
+function defineRandomSide() {
+    let random = Math.floor(Math.random() * 2)
+    
+    switch(random) {
+        case 0:
+            return
+        case 1:
+            return 'side2'
+    }
+}
