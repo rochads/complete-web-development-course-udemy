@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-image: url(./resources/images/bg.jpg);
     background-repeat: no-repeat;
@@ -39,12 +45,6 @@ body {
 }
 
 /* game_over.html */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 #game-over-container {
     text-align: center;
