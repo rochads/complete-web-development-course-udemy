@@ -18,10 +18,14 @@ function defineRandomPosition() {
         document.getElementById('gnat').remove()
 
         if (hearts === 0) {
-            alert('game over')
+
+            window.location.href = 'game_over.html'
+
         } else {
+
             document.getElementById(`heart${hearts}`).src = "./resources/images/heart_empty.png"
             hearts--
+
         }
 
     }

@@ -37,3 +37,29 @@ body {
     font-size: 20px;
     font-weight: bold;
 }
+
+/* game_over.html */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#game-over-container {
+    text-align: center;
+    height: 100vh;
+}
+
+#game-over-button-restart {
+    text-transform: uppercase;
+    background-color: rgb(0,0,0,0.7);
+    color: white;
+    border-radius: 10px;
+    padding: 15px 30px 15px 30px;
+    cursor: pointer;
+}
+
+#game-over-button-restart:hover {
+    background-color: rgb(0,0,0,0.8);
+}
