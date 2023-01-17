@@ -1,6 +1,7 @@
 let height = 0
 let width = 0
 let hearts = 3
+let time = 15
 
 function adjustGameWindowSize() {
     height = window.innerHeight
@@ -10,6 +11,20 @@ function adjustGameWindowSize() {
 }
 
 adjustGameWindowSize()
+
+let functionStopWatch = setInterval(function() {
+
+    time -= 1
+
+    if (time < 0) {
+        clearInterval(functionStopWatch)
+        clearInterval(functionCreateGnat)
+        alert('win')
+    } else {
+        document.getElementById('stopWatch').innerHTML = time
+    }
+
+}, 1000)
 
 function defineRandomPosition() {
     

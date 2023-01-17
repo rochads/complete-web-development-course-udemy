@@ -28,7 +28,7 @@ body {
     transform: scaleX(-1);
 }
 
-.painel {
+.panel {
     position: absolute;
     width: 190px;
     padding: 10px;
@@ -39,7 +39,7 @@ body {
     opacity: 0.7;
 }
 
-.cronometro {
+.stopWatch {
     font-size: 20px;
     font-weight: bold;
 }

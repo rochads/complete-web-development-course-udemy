@@ -13,15 +13,16 @@
 <body onresize="adjustGameWindowSize()">
 
 
-    <div class="painel">
-        <div class="vidas">
+    <div class="panel">
+        <div class="lifes">
             <img id="heart3" src="./resources/images/heart_full.png">
             <img id="heart2" src="./resources/images/heart_full.png">
             <img id="heart1" src="./resources/images/heart_full.png">
         </div>
 
-        <div class="cronometro">
-            Tempo restante: ?
+        <div class="stopWatch">
+            Tempo restante: 
+            <span id="stopWatch"></span>
         </div>
 
     </div>
@@ -29,7 +30,9 @@
 
     <script>
 
-        setInterval(function() {
+        document.getElementById('stopWatch').innerHTML = time
+
+        let functionCreateGnat = setInterval(function() {
             defineRandomPosition()
         }, 1000)
 
