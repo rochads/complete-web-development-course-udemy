@@ -11,6 +11,10 @@ function adjustGameWindowSize() {
 adjustGameWindowSize()
 
 function defineRandomPosition() {
+    
+    if (document.getElementById('gnat')) {
+        document.getElementById('gnat').remove()
+    }
 
     let positionX = Math.floor(Math.random() * width) - 90
     let positionY = Math.floor(Math.random() * height) - 90
@@ -20,15 +24,13 @@ function defineRandomPosition() {
 
     console.log (`gnat's position on the x-axis: ${positionX}, gnat's position on the y-axis: ${positionY}`)
 
-
-
-
     let gnat = document.createElement('img')
     gnat.src = "./resources/images/gnat.png"
     gnat.className = defineRandomSize() + ' ' + defineRandomSide()
     gnat.style.left = `${positionX}px`
     gnat.style.top = `${positionY}px`
     gnat.style.position = 'absolute'
+    gnat.id = 'gnat'
 
     document.body.appendChild(gnat)
 
