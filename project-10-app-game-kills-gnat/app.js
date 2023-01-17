@@ -17,9 +17,12 @@ let functionStopWatch = setInterval(function() {
     time -= 1
 
     if (time < 0) {
+
         clearInterval(functionStopWatch)
         clearInterval(functionCreateGnat)
-        alert('win')
+        
+        window.location.href = 'win.html'
+
     } else {
         document.getElementById('stopWatch').innerHTML = time
     }

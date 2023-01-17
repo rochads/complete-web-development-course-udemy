@@ -44,14 +44,14 @@ body {
     font-weight: bold;
 }
 
-/* game_over.html */
+/* game_over.html / win.html */
 
-#game-over-container {
+#container {
     text-align: center;
     height: 100vh;
 }
 
-#game-over-button-restart {
+#button-restart {
     text-transform: uppercase;
     background-color: rgb(0,0,0,0.7);
     color: white;
@@ -60,6 +60,6 @@ body {
     cursor: pointer;
 }
 
-#game-over-button-restart:hover {
+#button-restart:hover {
     background-color: rgb(0,0,0,0.8);
 }
