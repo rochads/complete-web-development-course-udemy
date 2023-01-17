@@ -44,22 +44,40 @@ body {
     font-weight: bold;
 }
 
-/* game_over.html / win.html */
+
+
+/* index.html / game_over.html / win.html */
 
 #container {
     text-align: center;
     height: 100vh;
 }
 
-#button-restart {
+.button {
     text-transform: uppercase;
-    background-color: rgb(0,0,0,0.7);
     color: white;
     border-radius: 10px;
     padding: 15px 30px 15px 30px;
     cursor: pointer;
 }
 
+#button-restart {
+    background-color: rgba(0,0,0,0.7);
+}
+
 #button-restart:hover {
-    background-color: rgb(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.8);
+}
+
+#button-start {
+    background-color: rgba(255, 0, 0, 0.7);
+}
+
+#button-start:hover {
+    background-color: rgba(255, 0, 0, 0.8);
+}
+
+#select-level {
+    color: black;
+    margin-bottom: 10px;
 }

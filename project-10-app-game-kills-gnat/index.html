@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Kills Gnat</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <script>
+
+        function startGame() {
+
+        let level = document.getElementById('select-level').value
+
+        if (level === '') {
+            return false
+        }
+
+        console.log(level)
+
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <div id="container">
+
+        <img id="content" src="./resources/images/game.png">
+
+        <br>
+
+        <select id="select-level" class="button">
+            <option value="">-- Select Level --</option>
+            <option value="easy">Easy</option>
+            <option value="normal">Normal</option>
+            <option value="hard">Hard</option>
+        </select>
+
+        <br>
+
+        <button id="button-start" class="button" onclick="startGame()">Start</button>
+
+    </div>
+    
+    
+</body>
+</html>
