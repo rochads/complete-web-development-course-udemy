@@ -79,11 +79,14 @@ function registerExpense() {
 
         bd.write(expense)
 
+        $('#sucessoGravacao').modal('show')
+
     } else {
 
         // false
 
-        console.log('invalid')
+        $('#erroGravacao').modal('show')
+
 
     }
 
