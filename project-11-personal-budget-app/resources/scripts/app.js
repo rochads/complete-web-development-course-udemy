@@ -1,12 +1,34 @@
+class Expense {
+    
+    constructor(year, month, day, type, description, value) {
+        this.year = year
+        this.month = month
+        this.day = day
+        this.type = type
+        this.description = description
+        this.value = value
+    }
+
+}
+
 function registerExpense() {
 
-    let ano = document.getElementById('ano')
-    let mes = document.getElementById('mes')
-    let dia = document.getElementById('dia')
-    let tipo = document.getElementById('tipo')
-    let descricao = document.getElementById('descricao')
-    let valor = document.getElementById('valor')
+    let year = document.getElementById('year')
+    let month = document.getElementById('month')
+    let day = document.getElementById('day')
+    let type = document.getElementById('type')
+    let description = document.getElementById('description')
+    let value = document.getElementById('value')
 
-    console.log(ano.value, mes.value, dia.value, tipo.value, descricao.value, valor.value)
+    let expense = new Expense(
+        year.value,
+        month.value,
+        day.value,
+        type.value,
+        description.value,
+        value.value
+    )
+
+    console.log(expense)
     
 }
