@@ -29,6 +29,12 @@ function registerExpense() {
         value.value
     )
 
-    console.log(expense)
+    write(expense)
     
+}
+
+function write(e) {
+
+    localStorage.setItem('expense', JSON.stringify(e))
+
 }
