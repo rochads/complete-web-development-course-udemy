@@ -9,6 +9,20 @@ class Expense {
         this.value = value
     }
 
+    validateData() {
+
+        for (let i in this) {
+
+            if (this[i] === undefined || this[i] === '' || this[i] === null) {
+                return false
+            }
+
+        }
+
+        return true
+
+    }
+
 }
 
 class Bd {
@@ -59,6 +73,20 @@ function registerExpense() {
         value.value
     )
 
-    bd.write(expense)
+    if (expense.validateData()) {
+
+        // true
+
+        bd.write(expense)
+
+    } else {
+
+        // false
+
+        console.log('invalid')
+
+    }
+
+    
     
 }
