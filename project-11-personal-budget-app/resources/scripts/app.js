@@ -79,13 +79,25 @@ function registerExpense() {
 
         bd.write(expense)
 
-        $('#sucessoGravacao').modal('show')
+        document.getElementById('modal-title').innerHTML = 'Registro inserido com sucesso'
+        document.getElementById('modal-title-parent').className = 'modal-header text-success'
+        document.getElementById('modal-content').innerHTML = 'Despesa foi cadastrada com sucesso!'
+        document.getElementById('modal-btn').innerHTML = 'Voltar'
+        document.getElementById('modal-btn').className = 'btn btn-success'
+
+        $('#modal-register-expense').modal('show')
 
     } else {
 
         // false
 
-        $('#erroGravacao').modal('show')
+        document.getElementById('modal-title').innerHTML = 'Erro na inclusão do registro'
+        document.getElementById('modal-title-parent').className = 'modal-header text-danger'
+        document.getElementById('modal-content').innerHTML = 'Erro na gravação! Verifique se todos os campos foram preenchidos.'
+        document.getElementById('modal-btn').innerHTML = 'Voltar e corrigir'
+        document.getElementById('modal-btn').className = 'btn btn-danger'
+
+        $('#modal-register-expense').modal('show')
 
 
     }
