@@ -75,7 +75,35 @@ class Bd {
 
     search(expense) {
 
-        console.log(expense)
+        let expensesFiltered = Array()
+
+        expensesFiltered = this.retrieveAllRecords()
+
+        if (expense.year != '') {
+            expensesFiltered = expensesFiltered.filter(e => e.year == expense.year)
+        } 
+
+        if (expense.month != '') {
+            expensesFiltered = expensesFiltered.filter(e => e.month == expense.month)
+        } 
+
+        if (expense.day != '') {
+            expensesFiltered = expensesFiltered.filter(e => e.day == expense.day)
+        } 
+
+        if (expense.type != '') {
+            expensesFiltered = expensesFiltered.filter(e => e.type == expense.type)
+        } 
+
+        if (expense.description != '') {
+            expensesFiltered = expensesFiltered.filter(e => e.description == expense.description)
+        } 
+
+        if (expense.value != '') {
+            expensesFiltered = expensesFiltered.filter(e => e.value == expense.value)
+        } 
+
+        console.log(expensesFiltered)
 
     }
 
