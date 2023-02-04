@@ -109,6 +109,13 @@ function registerExpense() {
 
         $('#modal-register-expense').modal('show')
 
+        year.value = ''
+        month.value = ''
+        day.value = ''
+        type.value = ''
+        description.value = ''
+        value.value = ''
+
     } else {
 
         // false
