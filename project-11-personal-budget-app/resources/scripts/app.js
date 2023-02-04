@@ -51,6 +51,28 @@ class Bd {
     
     }
 
+    retrieveAllRecords() {
+
+        let expenses = Array()
+
+        let id = localStorage.getItem('id')
+
+        for (let i = 1; i <= id; i++) {
+
+            let expense = JSON.parse(localStorage.getItem(i))
+
+            if (expense === null) {
+                continue
+            }
+
+            expenses.push(expense)
+
+        }
+
+        return expenses
+
+    }
+
 }
 
 let bd = new Bd()
@@ -102,6 +124,14 @@ function registerExpense() {
 
     }
 
-    
-    
+}
+
+function loadListExpenses() {
+
+    let expenses = Array()
+
+    expenses = bd.retrieveAllRecords()
+
+    console.log(expenses)
+
 }
