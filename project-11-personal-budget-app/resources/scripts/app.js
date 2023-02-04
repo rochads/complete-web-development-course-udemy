@@ -132,6 +132,35 @@ function loadListExpenses() {
 
     expenses = bd.retrieveAllRecords()
 
-    console.log(expenses)
+    let listExpenses = document.getElementById('list-expenses')
+
+    expenses.forEach(function(i) {
+
+        //console.log(i)
+
+        let line = listExpenses.insertRow()
+
+        line.insertCell(0).innerHTML = `${i.day}/${i.month}/${i.year}`
+
+        switch (i.type) {
+            case '1': i.type = 'Alimentação'
+                break
+            case '2': i.type = 'Educação'
+                break
+            case '3': i.type = 'Lazer'
+                break
+            case '4': i.type = 'Saúde'
+                break
+            case '5': i.type = 'Transporte'
+                break
+        }
+
+        line.insertCell(1).innerHTML = i.type
+        line.insertCell(2).innerHTML = i.description
+        line.insertCell(3).innerHTML = i.value
+
+
+
+    })
 
 }
