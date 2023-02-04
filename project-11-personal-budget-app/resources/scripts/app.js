@@ -73,6 +73,12 @@ class Bd {
 
     }
 
+    search(expense) {
+
+        console.log(expense)
+
+    }
+
 }
 
 let bd = new Bd()
@@ -169,5 +175,20 @@ function loadListExpenses() {
 
 
     })
+
+}
+
+function searchExpense() {
+
+    let year = document.getElementById('year').value
+    let month = document.getElementById('month').value
+    let day = document.getElementById('day').value
+    let type = document.getElementById('type').value
+    let description = document.getElementById('description').value
+    let value = document.getElementById('value').value
+
+    let expense = new Expense(year, month, day, type, description, value)
+
+    bd.search(expense)
 
 }
