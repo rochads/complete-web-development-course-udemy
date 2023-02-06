@@ -65,6 +65,7 @@ class Bd {
                 continue
             }
 
+            expense.id = i
             expenses.push(expense)
 
         }
@@ -105,6 +106,10 @@ class Bd {
 
         return expensesFiltered
 
+    }
+
+    remove(id) {
+        localStorage.removeItem(id)
     }
 
 }
@@ -202,7 +207,17 @@ function loadListExpenses(expenses = Array(), filter = false) {
         line.insertCell(2).innerHTML = i.description
         line.insertCell(3).innerHTML = i.value
 
+        let btn = document.createElement('button')
+        btn.className = 'btn btn-danger'
+        btn.innerHTML = '<i class="fas fa-times"></i>'
+        btn.id = `button-to-delete-expense-key-${i.id}`
+        btn.onclick = function() {
+            let id = this.id.replace('button-to-delete-expense-key-', '')
+            bd.remove(id)
+            window.location.reload()
+        }
 
+        line.insertCell(4).append(btn)
 
     })
 
