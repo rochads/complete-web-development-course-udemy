@@ -103,7 +103,7 @@ class Bd {
             expensesFiltered = expensesFiltered.filter(e => e.value == expense.value)
         } 
 
-        console.log(expensesFiltered)
+        return expensesFiltered
 
     }
 
@@ -167,13 +167,15 @@ function registerExpense() {
 
 }
 
-function loadListExpenses() {
+function loadListExpenses(expenses = Array(), filter = false) {
 
-    let expenses = Array()
-
-    expenses = bd.retrieveAllRecords()
+    if (expenses.length == 0 && filter === false) {
+        expenses = bd.retrieveAllRecords()
+    }
 
     let listExpenses = document.getElementById('list-expenses')
+
+    listExpenses.innerHTML = ''
 
     expenses.forEach(function(i) {
 
@@ -217,6 +219,8 @@ function searchExpense() {
 
     let expense = new Expense(year, month, day, type, description, value)
 
-    bd.search(expense)
+    let expenses = bd.search(expense)
+
+    loadListExpenses(expenses, true)
 
 }
